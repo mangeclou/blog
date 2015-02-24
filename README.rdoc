@@ -1,5 +1,13 @@
 == README
 
+TODO :
+_Connexion : un utilisateur (avec mdp et pseudo prédéterminer peut se logger)
+--Une fois loggé il doit pouvoira ajouter, supprimer, éditer des posts et se déconnecter
+-Un utilsateur non connecté peut voir des posts mais pas les éditer (bonus : il peut ajouter des commentaires)
+
+
+
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 

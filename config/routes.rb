@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'home/index'
+  #On définie la page home comme la racine du site
+  root 'home#index'
+  resources :posts
+  
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

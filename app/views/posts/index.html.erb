@@ -1,0 +1,63 @@
+      <div class="blog-header">
+        <h1 class="blog-title">Tous les articles</h1>
+        <p class="lead blog-description">The official example template of creating a blog with Bootstrap.</p>
+      </div>
+
+      <div class="row">
+
+        <div class="col-sm-8 blog-main">
+
+          <div class="blog-post">
+            
+            <p class="blog-post-meta">todo ajouter date<a href="#">Todo ajouter auteur</a></p>
+            <% @posts.each do |post| %>
+            <h2 class="blog-post-title"><%= post.title %></h2>
+            <div class="post-body"><%= post.body %></div>
+            <%= link_to 'Show', post,:class => "btn btn-default" %> 
+            <%= link_to 'Edit', edit_post_path(post),:class => "glyphicon glyphicon-pencil" %>
+           
+            <%= link_to 'Destroy', post, method: :delete,:class => "glyphicon glyphicon-delete", data: { confirm: 'Are you sure?' } %></>
+            <% end %>
+            <br>
+            <div class="new-post">
+              <%= link_to 'New Post', new_post_path,:class => "btn btn-primary" %>
+            </div>  
+          </div><!-- /.blog-post -->
+
+        </div><!-- /.blog-main -->
+
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+            <h4>About</h4>
+            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+          </div>
+          <div class="sidebar-module">
+            <h4>Archives</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">March 2014</a></li>
+              <li><a href="#">February 2014</a></li>
+              <li><a href="#">January 2014</a></li>
+              <li><a href="#">December 2013</a></li>
+              <li><a href="#">November 2013</a></li>
+              <li><a href="#">October 2013</a></li>
+              <li><a href="#">September 2013</a></li>
+              <li><a href="#">August 2013</a></li>
+              <li><a href="#">July 2013</a></li>
+              <li><a href="#">June 2013</a></li>
+              <li><a href="#">May 2013</a></li>
+              <li><a href="#">April 2013</a></li>
+            </ol>
+          </div>
+          <div class="sidebar-module">
+            <h4>Elsewhere</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">GitHub</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Facebook</a></li>
+            </ol>
+          </div>
+        </div><!-- /.blog-sidebar -->
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
